@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:maxLines="2"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.452" />
+
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="."
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="183dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:layout_height="match_parent"
+            android:onClick="allClearAction"
+            android:text="AC"
+            android:textColor="@color/red"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:onClick="backSpaceAction"
+            android:text="⌫"
+            android:textColor="@color/red" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="" />
+
+        <Button
+            style="@style/buttonOperator"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="9" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="x"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="4" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="5" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="6" />
+
+        <Button
+            style="@style/buttonOperator"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"/>
+
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"/>
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"/>
+        <Button
+            style="@style/buttonNumber"
+            android:layout_weight="2"
+            android:background="@color/orange"
+            android:textSize="40sp"
+            android:onClick="equalsAction"
+            android:text="=" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
